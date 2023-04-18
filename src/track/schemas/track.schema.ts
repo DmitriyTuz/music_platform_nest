@@ -11,7 +11,7 @@ export class Track {
     name: string;
 
     @Prop()
-    artist: number;
+    artist: string;
 
     @Prop()
     text: string;
@@ -29,7 +29,7 @@ export class Track {
     comments: Comment[];
 
     @Prop({type: mongoose.Schema.Types.ObjectId, ref: 'Album'})
-    track: Album
+    albumId: Album;
 }
 
 export const TrackSchema = SchemaFactory.createForClass(Track);
