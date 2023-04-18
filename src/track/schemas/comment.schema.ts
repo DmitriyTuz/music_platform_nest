@@ -11,10 +11,10 @@ export class Comment {
     username: string;
 
     @Prop()
-    text: number;
+    text: string;
 
     @Prop({type: mongoose.Schema.Types.ObjectId, ref: 'Track'})
-    track: Track
+    trackId: Track
 
 }
 
